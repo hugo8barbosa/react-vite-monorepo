@@ -1,0 +1,39 @@
+{
+    "name": "react-vite-monorepo",
+    "version": "1.0.0",
+    "author": "Hugo Barbosa",
+    "license": "MIT",
+    "description": "Monorepo containing multiple approaches to build a we application with Vite and React",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/hugo8barbosa/react-vite-monorepo.git"
+    },
+    "bugs": {
+        "url": "https://github.com/hugo8barbosa/react-vite-monorepo/issues"
+    },
+    "homepage": "https://github.com/hugo8barbosa/react-vite-monorepo#readme",
+    "scripts": {
+        "clean": "rm -rf ./node_modules && rm -rf ./packages/*/node_modules && rm -rf ./apps/*/node_modules",
+        "shared:build": "pnpm run build --filter react-vite-monorepo-shared",
+        "postinstall": "(cd apps/react-native-expo-app && npm install); (cd apps/react-vite-microfrontends-app/apps/react-vite-microfrontends-app-3 && npm install)",
+        "prettier": "prettier --check .",
+        "prettier-fix": "prettier --write .",
+        "lint": "eslint ./ --cache",
+        "lint-fix": "eslint ./ --fix --cache",
+        "prepare": "husky install"
+    },
+    "devDependencies": {
+        "@typescript-eslint/eslint-plugin": "^5.43.0",
+        "@typescript-eslint/parser": "^5.43.0",
+        "eslint": "^8.27.0",
+        "eslint-config-prettier": "^8.5.0",
+        "eslint-plugin-import": "^2.26.0",
+        "eslint-plugin-node": "^11.1.0",
+        "eslint-plugin-promise": "^6.1.1",
+        "eslint-plugin-react": "^7.31.11",
+        "eslint-plugin-react-hooks": "^4.6.0",
+        "eslint-plugin-security": "^1.5.0",
+        "prettier": "2.5.1",
+        "husky": "^8.0.0"
+    }
+}

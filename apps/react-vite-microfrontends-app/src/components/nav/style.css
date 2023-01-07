@@ -1,0 +1,40 @@
+h2 {
+    text-transform: uppercase;
+    font-weight: 500;
+    line-height: 64px;
+}
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    margin-bottom: 2em;
+}
+
+.navigation a {
+    display: grid;
+    font-weight: 600;
+}
+
+a:hover,
+a.active {
+    scale: 1.2;
+}
+
+a.app1,
+a.app1:hover {
+    color: #e3f500;
+    filter: drop-shadow(0 0 1em #e3f500);
+}
+
+a.app2,
+a.app2:hover {
+    color: #f19d00;
+    filter: drop-shadow(0 0 1em #f19d00);
+}
+
+a.app3,
+a.app3:hover {
+    filter: drop-shadow(0 0 1em #e3758b);
+    color: #e3758b;
+}

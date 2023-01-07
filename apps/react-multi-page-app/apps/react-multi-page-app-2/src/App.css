@@ -1,0 +1,95 @@
+#root {
+    margin: 0 auto;
+    max-width: 600px;
+    text-align: center;
+    width: 100%;
+}
+
+.logo {
+    height: 6em;
+    padding: 1.5em;
+    will-change: filter;
+}
+.logo:hover {
+    filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+    filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translatey(0px);
+    }
+    50% {
+        transform: translatey(-20px);
+    }
+    100% {
+        transform: translatey(0px);
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .react {
+        animation: logo-spin infinite 20s linear;
+    }
+    .vite {
+        animation: float 3s ease-in-out infinite;
+    }
+}
+
+.card {
+    width: 60%;
+    margin: 0 auto;
+    filter: drop-shadow(0 0 1.5em #646cffaa);
+}
+
+h2 {
+    text-transform: uppercase;
+    font-weight: 500;
+    line-height: 64px;
+}
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    margin-bottom: 2em;
+}
+
+.navigation a {
+    display: grid;
+    font-weight: 600;
+}
+
+a:hover,
+a.active {
+    scale: 1.2;
+}
+
+a.host,
+a.host:hover {
+    color: #e3f500;
+    filter: drop-shadow(0 0 1em #e3f500);
+}
+
+a.app1,
+a.app1:hover {
+    color: #f19d00;
+    filter: drop-shadow(0 0 1em #f19d00);
+}
+
+a.app2,
+a.app2:hover {
+    filter: drop-shadow(0 0 1em #e3758b);
+    color: #e3758b;
+}

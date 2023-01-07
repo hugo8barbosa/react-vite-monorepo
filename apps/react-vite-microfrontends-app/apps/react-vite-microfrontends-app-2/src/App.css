@@ -1,0 +1,54 @@
+#root-app2 {
+    margin: 0 auto;
+    max-width: 600px;
+    text-align: center;
+    width: 100%;
+}
+
+.logo {
+    height: 6em;
+    padding: 1.5em;
+    will-change: filter;
+}
+.logo:hover {
+    filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+    filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translatey(0px);
+    }
+    50% {
+        transform: translatey(-20px);
+    }
+    100% {
+        transform: translatey(0px);
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .react {
+        animation: logo-spin infinite 20s linear;
+    }
+    .vite {
+        animation: float 3s ease-in-out infinite;
+    }
+}
+
+.card {
+    width: 60%;
+    margin: 0 auto;
+    filter: drop-shadow(0 0 1.5em #646cffaa);
+}

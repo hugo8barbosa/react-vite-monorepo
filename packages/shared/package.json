@@ -1,0 +1,51 @@
+{
+    "name": "react-vite-monorepo-shared",
+    "version": "1.0.0",
+    "description": "Internal package with components to be shared by other apps",
+    "author": "Hugo Barbosa",
+    "license": "MIT",
+    "main": "./build/commonjs/index.js",
+    "types": "./build/typescript/index.d.ts",
+    "react-native": "./src/index.ts",
+    "files": [
+        "build",
+        "src"
+    ],
+    "scripts": {
+        "lint": "eslint --ext js,ts,tsx .",
+        "test": "jest",
+        "build": "bob build"
+    },
+    "dependencies": {
+        "react-native-web": "^0.18.10"
+    },
+    "devDependencies": {
+        "@testing-library/react-native": "^11.5.0",
+        "@tsconfig/recommended": "^1.0.1",
+        "@types/jest": "^26.0.24",
+        "@types/react": "~18.0.26",
+        "@types/react-native": "~0.69.16",
+        "babel-preset-expo": "^9.2.2",
+        "jest": "^26.6.3",
+        "jest-expo": "^46.0.2",
+        "react": "~18.0.0",
+        "react-native": "~0.69.7",
+        "react-native-builder-bob": "^0.18.3",
+        "react-test-renderer": "~18.0.0"
+    },
+    "jest": {
+        "preset": "jest-expo",
+        "testPathIgnorePatterns": [
+            "/node_modules/",
+            "/build/"
+        ]
+    },
+    "react-native-builder-bob": {
+        "source": "src",
+        "output": "build",
+        "targets": [
+            "commonjs",
+            "typescript"
+        ]
+    }
+}

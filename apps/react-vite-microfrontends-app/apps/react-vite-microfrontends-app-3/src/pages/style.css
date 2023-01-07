@@ -1,0 +1,38 @@
+#app1-local {
+    text-align: center;
+    font-family: system-ui;
+}
+
+.container {
+    flex: 1;
+    background-color: #fff;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    max-width: fit-content;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+h1 {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+
+button {
+    background-color: #3f51b5;
+    width: 200px;
+    height: 50px;
+    border-radius: 8px;
+    margin-top: 30px;
+    color: #fff;
+    font-size: 25px;
+    font-weight: 800;
+    cursor: pointer;
+    border: none;
+}
+
+.linkTo {
+    font-weight: 900;
+}
