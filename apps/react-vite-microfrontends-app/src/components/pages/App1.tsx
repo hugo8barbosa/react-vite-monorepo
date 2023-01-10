@@ -12,8 +12,8 @@ const App1 = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        // Listen to navigation events dispatched inside app2 mfe.
-        const app2NavigationEventHandler = (event: Event) => {
+        // Listen to navigation events dispatched inside app1 mfe.
+        const app1NavigationEventHandler = (event: Event) => {
             const pathname = (event as CustomEvent<string>).detail;
             const newPathname = `${app1Basename}${pathname}`;
             if (newPathname === shellBrowserHistory.location.pathname) {
@@ -21,7 +21,7 @@ const App1 = () => {
             }
             navigate(newPathname);
         };
-        window.addEventListener("[app1] navigated", app2NavigationEventHandler);
+        window.addEventListener("[app1] navigated", app1NavigationEventHandler);
 
         // Listen to navigation events in shell app to notifify app1 mfe.
         const unlistenHistoryChanges = shellBrowserHistory.listen(({ location }) => {
@@ -40,7 +40,7 @@ const App1 = () => {
         });
 
         return () => {
-            window.removeEventListener("[app1] navigated", app2NavigationEventHandler);
+            window.removeEventListener("[app1] navigated", app1NavigationEventHandler);
             unlistenHistoryChanges();
         };
     }, [navigate]);

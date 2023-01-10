@@ -12,7 +12,7 @@ const App3 = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        // Listen to navigation events dispatched inside react-vite-microfrontends-app-3 mfe.
+        // Listen to navigation events dispatched inside app3 mfe.
         const app3NavigationEventHandler = (event: Event) => {
             const pathname = (event as CustomEvent<string>).detail;
             const newPathname = `${app3Basename}${pathname}`;
@@ -21,9 +21,9 @@ const App3 = () => {
             }
             navigate(newPathname);
         };
-        window.addEventListener("[react-vite-microfrontends-app-3] navigated", app3NavigationEventHandler);
+        window.addEventListener("[app3] navigated", app3NavigationEventHandler);
 
-        // Listen to navigation events in shell app to notifify react-vite-microfrontends-app-3 mfe.
+        // Listen to navigation events in shell app to notifify app3 mfe.
         const unlistenHistoryChanges = shellBrowserHistory.listen(({ location }) => {
             if (location.pathname.startsWith(app3Basename)) {
                 window.dispatchEvent(
@@ -40,7 +40,7 @@ const App3 = () => {
         });
 
         return () => {
-            window.removeEventListener("[react-vite-microfrontends-app-3] navigated", app3NavigationEventHandler);
+            window.removeEventListener("[app3] navigated", app3NavigationEventHandler);
             unlistenHistoryChanges();
         };
     }, [navigate]);
