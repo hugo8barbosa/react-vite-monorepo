@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "author": "Hugo Barbosa",
     "license": "MIT",
-    "description": "Monorepo containing multiple approaches to build a we application with Vite and React",
+    "description": "Monorepo containing multiple approaches to build a web applications with Vite, React and React Native",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/hugo8barbosa/react-vite-monorepo.git"

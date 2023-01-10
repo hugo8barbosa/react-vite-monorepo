@@ -33,7 +33,7 @@ export default defineConfig({
     },
     optimizeDeps: {
         include: ["react-vite-monorepo-shared"],
-        exclude: ["app1", "app2", "react-vite-microfrontends-app-3"],
+        exclude: ["app1", "app2", "app3"],
     },
     build: {
         commonjsOptions: { include: [/shared/, /node_modules/] },
